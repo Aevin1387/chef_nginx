@@ -20,7 +20,8 @@
 packages = value_for_platform_family(
   %w(rhel) => node['nginx']['passenger']['packages']['rhel'],
   %w(fedora) => node['nginx']['passenger']['packages']['fedora'],
-  %w(debian) => node['nginx']['passenger']['packages']['debian']
+  %w(debian) => node['nginx']['passenger']['packages']['debian'],
+  'default' => []
 )
 
 unless packages.empty?
